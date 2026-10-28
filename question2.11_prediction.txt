@@ -1,0 +1,13 @@
+I think Model B should fix most of the mirror and rotation problem, so its CM, EM, CR and ER should drop close to E(5) of 0.0222. But it will not help with speed, so its E(2) at 2x and 3x should stay near model A (about 0.045 and 0.054).
+
+Model C should fix the unfamiliar motion problem at 2x, because it sees fast clips in training, but I think it will stay bad at 3x, where the digits move at about 10 pixels per frame and model A’s reach is only 8 pixels.
+
+I think, Model D, with a reach of 16 pixels, should be the only model that does well at 3x, and its mirror and rotation errors should stay about the same as model A’s.
+
+My reasoning, from the Tables 3 and 4 produced:
+
+Mirror and rotation are a mild failure: EM is 0.0229 and ER is 0.0240, against E(5) of 0.0222. Both are far below Blank at 0.0426, so model A mostly still works on transformed clips and the gap is small.
+
+Speed is the big failure: E(2) at 2x is 0.0454 and at 3x is 0.0535. Both are worse than Blank for the first two horizons (about 0.0426), and they are close to Copy-last (0.0661 and 0.0703).
+
+Why C and D split: At 2x the speed is about 6.6 pixels, which fits inside 8 pixels of reach, so data should help by itself alone. At 3x it is about 10 pixels, which is above 8, so only a bigger reach can help.
