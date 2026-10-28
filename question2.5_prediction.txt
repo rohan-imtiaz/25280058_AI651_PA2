@@ -1,0 +1,5 @@
+Mirror: I think model A will partly pass. The motion is familiar, but the mirrored digits are new, so the consistency gap CM will be above zero and EM will be above E(5) of 0.0222. I still expect it to be better than Blank.
+
+Rotation: I think it might be worse than mirror, because both the digit appearance and the direction histogram change more (0.20 against 0.13).
+
+Speed: My reach is 8 pixels, and the median speed is 3.32 pixels per frame. So the limit should be around 8 divided by 3.32, which is 2.4x. At 2x (about 6.6 pixels) I think of a degraded but usable prediction. At 3x (about 10 pixels) I think it will fail. Some digits are faster than the median, so 2x should already be hurt a little.
